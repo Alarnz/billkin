@@ -18,7 +18,7 @@ class Article(models.Model):
     def __str__(self):
         return self.headline
 
-#作业提交#
+#作业提交#a
 from django.db import models
 
 class Student(models.Model):
@@ -35,7 +35,7 @@ class Student(models.Model):
         return self.full_name
 
 class Homework(models.Model):
-    commit_date = models.DateField()
+    commit_date = models.DateField(auto_now=True)
     headline = models.CharField(max_length=200)
     attach = models.FileField()
     remark = models.TextField()
